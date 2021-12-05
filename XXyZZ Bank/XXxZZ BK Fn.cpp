@@ -93,7 +93,7 @@ int Account::savORche() // 1st menu to choose account type
 	cout << "\n\t Please Select Account Type " << endl;
 	cout << "\n\t 1. Savings Account" << endl;
 	cout << "\n\t 2. Deposit " << endl;
-	cout << "\n\t 3. Exit " << endl;
+	cout << "\n\t 3. Cancel " << endl;
 
 	cin >> q;
 	cout << "\t Choice:  " << q << endl;

@@ -16,7 +16,7 @@ void printTransacionStatus(bool status) {
 		cout << "\nTransaction successful" << endl;
 	}
 	else {
-		cout << "nError : Transaction failed" << endl;
+		cout << "\nError : Transaction failed" << endl;
 	}
 }
 
@@ -53,16 +53,21 @@ int main()
 					break;
 
 				case'2': // option two-deposit into account
-
-					cout << "Depositing 1000 in savingsaccount" << endl;
-					printTransacionStatus(a1.deposit(1000));
+					double dep_a;
+					cout << "\nEnter Deposit Amount";
+					cin >> dep_a;
+					cout << "\nDepositing $"<< dep_a<<" in savingsaccount" << endl;
+					printTransacionStatus(a1.deposit(dep_a));
 					cout << "\nAmount in Savings Account after transaction :" << a1.getBalance() << endl;
-
-					//a1.deposit();
 					break;
 
 				case'3': // option three-withdraw from account
-					//a1.withdraw();
+					double wit_a;
+					cout << "\nEnter Withdrawl Amount";
+					cin >> wit_a;
+					cout << "\nWithdrawing $"<<wit_a<<" from savingsaccount" << endl;
+					printTransacionStatus(a1.withdraw(wit_a));
+					cout << "\nAmount in Savings Account after transaction :" << a1.getBalance() << endl;
 					break;
 
 				case '4': // option four- exit the program
