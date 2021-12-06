@@ -1,8 +1,7 @@
 /*
 Group Members: Nashorn Passley
 				Latona Levy
-				Dane Lazarus
-				Kerry-ann Berbick
+
 */
 
 #include "XXyZZ BK Head.h"
@@ -10,6 +9,8 @@ Group Members: Nashorn Passley
 #include <Conio.h>
 
 using namespace std;
+
+
 
 Account::Account()
 {
@@ -94,7 +95,7 @@ int Account::savORche() // 1st menu to choose account type
 
 	cout << "\n\t Please Select Account Type " << endl;
 	cout << "\n\t 1. Savings Account" << endl;
-	cout << "\n\t 2. Deposit " << endl;
+	cout << "\n\t 2. Chequing Account " << endl;
 	cout << "\n\t 3. Cancel " << endl;
 
 	cout << "\n\t Choice: ";

@@ -1,8 +1,7 @@
 /*
 Group Members: Nashorn Passley
 				Latona Levy
-				Dane Lazarus
-				Kerry-ann Berbick
+
 */
 
 
