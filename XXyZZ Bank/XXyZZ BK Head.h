@@ -3,7 +3,8 @@
 /*
 Group Members: Nashorn Passley
                 Latona Levy
-
+                Dane Lazarus
+                Kerry-ann Berbick
 */
 
 #include <string>
@@ -28,25 +29,25 @@ public:
     void start();
 };
 
-//class SavingAccount : public Account {
-//    float interestRate;
-//public:
-//    SavingAccount();
-//    SavingAccount(double init_balance, float rate);
-//    double calcinterest();
-//    void setInterestrate(float ra);
-//    float getInterestrate();
-//
-//
-//};
+class SavingAccount : public Account {
+private:
+    float interestRate;
+public:
+    SavingAccount();
+    SavingAccount(double init_balance, float rate);
+    void setInterestRate(float ir);
+    float getInterestRate();
+    double calcinterest();
+};
 
 
-//class ChequingAccount : public Account {
-//    double transactionFee;
-//public:
-//    ChequingAccount();
-//    ChequingAccount(double init_balance, double fee);
-//    void withdraw();
-//    void setTransactionFee(double fe);
-//    double getTransactionFee();
-//};
+class ChequingAccount : public Account {
+private:
+    double transactionFee;
+public:
+    ChequingAccount();
+    ChequingAccount(double init_balance, double fee);
+    void setTransactionFee(double tf);
+    double getTransactionFee();
+    bool withdraw(double amount);
+};

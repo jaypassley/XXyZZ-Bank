@@ -1,7 +1,8 @@
 /*
 Group Members: Nashorn Passley
 				Latona Levy
-
+				Dane Lazarus
+				Kerry-ann Berbick
 */
 
 #include "XXyZZ BK Head.h"
@@ -16,7 +17,6 @@ Account::Account()
 }
 
 Account::Account(double init_balance) {
-	//balance = 0;
 	balance=init_balance;
 }
 
@@ -34,7 +34,7 @@ double Account::getBalance() // function to display current balance in account
 
 bool Account::deposit(double amount) // function to deposit to account
 {
-	if (amount < 1000) {
+	if (amount < 0) {
 		return false;
 	}
 	balance += amount;
@@ -78,9 +78,11 @@ int Account::menu() // 2nd mwnu to select task to be done
 	cout << "\t 2. Deposit " << endl;
 	cout << "\t 3. Withdraw " << endl;
 	cout << "\t 4. Exit \n" << endl;
+	cout << "\t ... ";
 
+	cout << "\n\t Choice: ";
 	cin >> Z;
-	cout << "\t Choice:  " << Z << endl;
+
 	return Z;
 }
 
@@ -95,67 +97,75 @@ int Account::savORche() // 1st menu to choose account type
 	cout << "\n\t 2. Deposit " << endl;
 	cout << "\n\t 3. Cancel " << endl;
 
+	cout << "\n\t Choice: ";
 	cin >> q;
-	cout << "\t Choice:  " << q << endl;
+
 	return q;
 
 }
 
-//SavingAccount::SavingAccount()
-//{
-//	interestRate = 0;
-//}
-//
-//SavingAccount::SavingAccount(double init_balance, float rate)
-//{
-//	interestRate = 0;
-//}
-//
-//void SavingAccount::setInterestrate(float ra)
-//{
-//	interestRate = ra;
-//}
-//
-//float SavingAccount::getInterestrate()
-//{
-//	return interestRate;
-//}
-//
-//double SavingAccount::calcinterest()
-//{
-//	check();
-//	double intreIn;
-//	double newbal;;
-//	intreIn = balance * interestRate;
-//	newbal = balance + intreIn;
-//
-//
-//
-//	cout << "Your Account Balance is: $" << newbal << endl;
-//	return newbal;
-//}
 
-//ChequingAccount::ChequingAccount()
-//{
-//	transactionFee = 0;
-//}
-//ChequingAccount::ChequingAccount(double init_balance, double fee)
-//{
-//}
-//void ChequingAccount::withdraw()
-//{
-//	Account::withdraw();
-//}
-//void ChequingAccount::setTransactionFee(double fe)
-//{
-//	transactionFee = fe;
-//}
-//double ChequingAccount::getTransactionFee()
-//{
-//	return transactionFee;
-//}
-//;
 
+SavingAccount::SavingAccount()
+{
+	interestRate = 0;
+}
+
+SavingAccount::SavingAccount(double init_balance, float rate):Account(init_balance)
+{
+	if (rate < (float)0) {
+		rate = 0;
+	}
+	interestRate = rate;
+}
+
+void SavingAccount::setInterestRate(float ir)
+{
+	interestRate = ir;
+}
+
+float SavingAccount::getInterestRate()
+{
+	return interestRate;
+}
+
+
+double SavingAccount::calcinterest()
+{
+	return interestRate * getBalance();
+}
+
+
+
+ChequingAccount::ChequingAccount()
+{
+	transactionFee = 0;
+}
+
+ChequingAccount::ChequingAccount(double init_balance, double fee):Account(init_balance)
+{
+	if (fee < (double)0) {
+		fee = 0;
+	}
+	transactionFee = fee;
+}
+void ChequingAccount::setTransactionFee(double tf)
+{
+	transactionFee = tf;
+}
+double ChequingAccount::getTransactionFee()
+{
+	return transactionFee;
+}
+bool ChequingAccount::withdraw(double amount)
+{
+	if (amount <= 0 || amount > balance) {
+		return false;
+	}
+	balance -= amount;
+	balance -= transactionFee;
+	return true;
+}
 
 
 
