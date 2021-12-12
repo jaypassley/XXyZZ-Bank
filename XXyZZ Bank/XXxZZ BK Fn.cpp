@@ -79,7 +79,6 @@ int Account::menu() // 2nd mwnu to select task to be done
 	cout << "\t 2. Deposit " << endl;
 	cout << "\t 3. Withdraw " << endl;
 	cout << "\t 4. Exit \n" << endl;
-	cout << "\t ... ";
 
 	cout << "\n\t Choice: ";
 	cin >> Z;

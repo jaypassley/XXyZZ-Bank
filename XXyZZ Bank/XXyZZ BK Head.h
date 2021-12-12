@@ -50,3 +50,14 @@ public:
     double getTransactionFee();
     bool withdraw(double amount);
 };
+
+
+class Transaction
+{
+    double amount;
+    string type;
+public:
+    Transaction(double amt, string kind);
+    string Report();
+
+};
