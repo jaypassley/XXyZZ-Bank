@@ -20,4 +20,5 @@ std::string Transaction::Report()
 
 
     return receipt;
+
 }

@@ -1,0 +1,123 @@
+
+
+	 --Transaction Receipt-- 
+
+	   Account Type: Savings
+	   Transaction Type: Check Balance
+	   Amount: 5250.000004
+	------------------------------
+
+
+	 --Transaction Receipt-- 
+
+	   Account Type: Savings
+	   Transaction Type: Check Balance
+	   Amount: 5250.000004
+	------------------------------
+
+	   Account Type: Savings
+	   Transaction Type: Deposit
+	   Amount: 4000.000000
+	------------------------------
+
+
+	 --Transaction Receipt-- 
+
+	   Account Type: Savings
+	   Transaction Type: Check Balance
+	   Amount: 5250.000004
+	------------------------------
+
+	   Account Type: Savings
+	   Transaction Type: Deposit
+	   Amount: 4000.000000
+	------------------------------
+
+	   Account Type: Savings
+	   Transaction Type: Withdraw
+	   Amount: 3000.000000
+	------------------------------
+
+
+	 --Transaction Receipt-- 
+
+	   Account Type: Savings
+	   Transaction Type: Check Balance
+	   Amount: 5250.000004
+	------------------------------
+
+	   Account Type: Savings
+	   Transaction Type: Deposit
+	   Amount: 4000.000000
+	------------------------------
+
+	   Account Type: Savings
+	   Transaction Type: Withdraw
+	   Amount: 3000.000000
+	------------------------------
+
+	   Account Type: Chequing
+	   Transaction Type: Check Balance
+	   Amount: 6000.000000
+	------------------------------
+
+
+	 --Transaction Receipt-- 
+
+	   Account Type: Savings
+	   Transaction Type: Check Balance
+	   Amount: 5250.000004
+	------------------------------
+
+	   Account Type: Savings
+	   Transaction Type: Deposit
+	   Amount: 4000.000000
+	------------------------------
+
+	   Account Type: Savings
+	   Transaction Type: Withdraw
+	   Amount: 3000.000000
+	------------------------------
+
+	   Account Type: Chequing
+	   Transaction Type: Check Balance
+	   Amount: 6000.000000
+	------------------------------
+
+	   Account Type: Chequing
+	   Transaction Type: Deposit
+	   Amount: 1200.000000
+	------------------------------
+
+
+	 --Transaction Receipt-- 
+
+	   Account Type: Savings
+	   Transaction Type: Check Balance
+	   Amount: 5250.000004
+	------------------------------
+
+	   Account Type: Savings
+	   Transaction Type: Deposit
+	   Amount: 4000.000000
+	------------------------------
+
+	   Account Type: Savings
+	   Transaction Type: Withdraw
+	   Amount: 3000.000000
+	------------------------------
+
+	   Account Type: Chequing
+	   Transaction Type: Check Balance
+	   Amount: 6000.000000
+	------------------------------
+
+	   Account Type: Chequing
+	   Transaction Type: Deposit
+	   Amount: 1200.000000
+	------------------------------
+
+	   Account Type: Chequing
+	   Transaction Type: Withdraw
+	   Amount: 2500.000000
+	------------------------------

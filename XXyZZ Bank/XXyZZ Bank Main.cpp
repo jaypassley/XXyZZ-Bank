@@ -7,6 +7,7 @@ Group Members: Nashorn Passley
 
 #include "XXyZZ BK Head.h"
 #include <iostream>
+#include <fstream>
 #include <Conio.h>
 
 using namespace std;
@@ -41,6 +42,9 @@ int main()
 
 
 	
+	
+	ofstream lg("transaction_log.txt");
+	
 
 
 	char choice;
@@ -72,12 +76,18 @@ int main()
 					cout << "\n\t Total Amount in Savings Account after transaction : $" << s2.getBalance() << endl;
 
 					amt_tran = s2.getBalance();
+
 					a1.AssignReceipt(type_acc, type_tra, amt_tran);
 
 					for (auto t : a1.report()) {
 						cout << t << "\n";
+						
+						//write << t << "\n";
+						lg << t << "\n";
+						
+					
 					}
-
+					
 					system("pause");
 					system("cls");
 
@@ -99,7 +109,11 @@ int main()
 
 					for (auto t : a1.report()) {
 						cout << t << "\n";
+		
+						lg << t << "\n";
+						
 					}
+					
 
 					system("pause");
 					system("cls");
@@ -120,8 +134,11 @@ int main()
 
 					for (auto t : a1.report()) {
 						cout << t << "\n";
+						
+						lg << t << "\n";
+						
 					}
-
+					
 					break;
 
 				case '4': // option (four) exit the program
@@ -160,6 +177,8 @@ int main()
 
 					for (auto t : a1.report()) {
 						cout << t << "\n";
+
+						lg << t << "\n";
 					}
 
 					system("pause");
@@ -181,6 +200,8 @@ int main()
 
 					for (auto t : a1.report()) {
 						cout << t << "\n";
+
+						lg << t << "\n";
 					}
 
 					system("pause");
@@ -203,8 +224,10 @@ int main()
 
 					for (auto t : a1.report()) {
 						cout << t << "\n";
-					}
 
+						lg << t << "\n";
+					}
+					lg.close();
 					system("pause");
 					system("cls");
 					break;
