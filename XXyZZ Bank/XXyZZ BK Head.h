@@ -7,12 +7,14 @@ Group Members: Nashorn Passley
 */
 
 #include <string>
+#include <vector>
+#include "Transaction.h"
 
 class Account
 {
 protected:
     double balance;
-    void log();
+    std::vector<Transaction> log;
 public:
     Account();
     Account(double init_balance);
@@ -20,7 +22,11 @@ public:
     double getBalance();
     bool deposit(double amount);
     bool withdraw(double amount);
-    void report();
+
+    void AssignReceipt(std::string acc_type, std::string tra_type, double tra_amt);
+    std::vector<std::string>report();
+
+
 
     int check();
     int menu();
@@ -52,12 +58,3 @@ public:
 };
 
 
-class Transaction
-{
-    double amount;
-    string type;
-public:
-    Transaction(double amt, string kind);
-    string Report();
-
-};

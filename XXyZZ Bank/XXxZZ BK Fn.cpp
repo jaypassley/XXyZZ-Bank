@@ -7,6 +7,7 @@ Group Members: Nashorn Passley
 #include "XXyZZ BK Head.h"
 #include <iostream>
 #include <Conio.h>
+#include "Transaction.h"
 
 using namespace std;
 
@@ -169,6 +170,27 @@ bool ChequingAccount::withdraw(double amount)
 
 
 
+void Account::AssignReceipt(std::string acc_type, std::string tra_type, double tra_amt)
+{
+	log.push_back(Transaction(acc_type, tra_type,tra_amt));
+}
+
+std::vector<std::string> Account::report()
+{
+	std::vector<std::string> receipt;
+	receipt.push_back("\n\n\t --Transaction Receipt-- ");
+	
+
+	for (auto ss : log) {
+		receipt.push_back(ss.Report());
+
+		receipt.push_back("\t------------------------------");
+	}
+
+
+	return receipt;
+}
+
 
 
 
@@ -281,3 +303,6 @@ string passget() // function to get pin while maskin the pin input
 
 	return password2;
 } // End of Function to get pin
+
+
+
